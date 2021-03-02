@@ -180,10 +180,10 @@ def run():
     net['r3'].cmd('ip route add 192.168.4.0/29 via 192.168.3.1 dev r3-eth1')
     net['r3'].cmd('ip route add 192.168.6.0/29 via 192.168.3.1 dev r3-eth1')
     net['r3'].cmd('ip route add 192.168.7.0/29 via 192.168.3.1 dev r3-eth1')
-    net['r3'].cmd('iptables -A FORWARD -p icmp -d 192.168.6.0/29 -s 192.168.2.2 -j DROP > firewal.out')
-    net['r3'].cmd('iptables -A FORWARD -p icmp -d 192.168.7.0/29 -s 192.168.2.2 -j DROP > firewal.out')
-    net['r1'].cmd('iptables -A FORWARD -p icmp -d 192.168.6.0/29 -s 192.168.7.0/29 -j DROP > file2.out')
-    net['r1'].cmd('iptables -A FORWARD -p icmp -d 192.168.7.0/29 -s 192.168.6.0/29 -j DROP > file3.out')    
+    #net['r3'].cmd('iptables -A FORWARD -p icmp -d 192.168.6.0/29 -s 192.168.2.2 -j DROP > firewal.out')
+    #net['r3'].cmd('iptables -A FORWARD -p icmp -d 192.168.7.0/29 -s 192.168.2.2 -j DROP > firewal.out')
+    #net['r1'].cmd('iptables -A FORWARD -p icmp -d 192.168.6.0/29 -s 192.168.7.0/29 -j DROP > file2.out')
+    #net['r1'].cmd('iptables -A FORWARD -p icmp -d 192.168.7.0/29 -s 192.168.6.0/29 -j DROP > file3.out')    
 
 	
    
